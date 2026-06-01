@@ -1,0 +1,1128 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8"></meta>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
+
+<title>NCC Jagatpur PG College</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#f4f6fb;
+overflow-x:hidden;
+color:#111;
+}
+
+/* HEADER */
+
+header{
+background:linear-gradient(135deg,#8b0000,#1a0000);
+padding:18px 10px;
+text-align:center;
+color:white;
+box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+
+.top-logos{
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+gap:10px;
+margin-bottom:12px;
+}
+
+.top-logos img{
+height:42px;
+background:white;
+padding:4px;
+border-radius:50%;
+box-shadow:0 3px 12px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.top-logos img:hover{
+transform:scale(1.08);
+}
+
+.title-box h1{
+font-size:24px;
+letter-spacing:1px;
+margin-bottom:6px;
+}
+
+.college-name{
+font-size:15px;
+font-weight:bold;
+color:#ffd700;
+margin-top:5px;
+}
+
+.unit-name{
+font-size:12px;
+margin-top:4px;
+color:#f1f1f1;
+letter-spacing:1px;
+}
+
+/* MENU BUTTON */
+
+.menu-btn{
+display:inline-flex;
+align-items:center;
+gap:10px;
+margin:15px auto 24px auto;
+background:linear-gradient(135deg,#111,#8b0000,#c40000);
+background-size:200% 200%;
+animation:gradientMove 4s ease infinite;
+color:white;
+padding:15px 30px;
+border-radius:18px;
+font-size:15px;
+font-weight:bold;
+cursor:pointer;
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
+transition:0.3s;
+border:2px solid rgba(255,255,255,0.15);
+}
+
+@keyframes gradientMove{
+0%{
+background-position:0% 50%;
+}
+50%{
+background-position:100% 50%;
+}
+100%{
+background-position:0% 50%;
+}
+}
+
+.menu-btn:hover{
+transform:translateY(-3px) scale(1.03);
+}
+
+/* NOTICE BOARD */
+
+.notice-wrapper{
+width:95%;
+max-width:1150px;
+margin:auto;
+margin-bottom:35px;
+position:relative;
+}
+
+.notice-logo{
+width:52px;
+height:52px;
+background:white;
+padding:4px;
+border-radius:50%;
+position:absolute;
+left:50%;
+top:-26px;
+transform:translateX(-50%);
+z-index:10;
+box-shadow:0 5px 20px rgba(0,0,0,0.25);
+}
+
+.notice-board{
+background:
+linear-gradient(rgba(0,0,0,0.78),rgba(0,0,0,0.82)),
+url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1600&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+border-radius:26px;
+padding:55px 25px 30px;
+border:3px solid #ffd700;
+box-shadow:0 15px 35px rgba(0,0,0,0.25);
+overflow:hidden;
+position:relative;
+}
+
+.notice-board::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:6px;
+background:linear-gradient(90deg,#ffd700,#ffffff,#ffd700);
+}
+
+.notice-title{
+text-align:center;
+font-size:28px;
+font-weight:bold;
+color:#ffd700;
+letter-spacing:2px;
+margin-bottom:22px;
+text-shadow:0 0 12px rgba(255, 217, 0, 0.735);
+}
+.update-box{
+position:absolute;
+top:15px;
+right:18px;
+font-size:11px;
+font-weight:bold;
+color:white;
+z-index:100;
+}
+.notice-list{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.notice-item{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(4px);
+border-left:5px solid #ffd700;
+padding:15px 18px;
+border-radius:16px;
+display:flex;
+align-items:flex-start;
+gap:12px;
+transition:0.3s;
+}
+
+.notice-item:hover{
+transform:translateX(5px);
+background:rgba(255, 255, 255, 0.888);
+}
+
+.notice-icon{
+font-size:20px;
+}
+
+.notice-text{
+color:white;
+font-size:14px;
+line-height:1.8;
+}
+
+/* OVERLAY */
+
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.55);
+display:none;
+z-index:1000;
+}
+
+/* SIDE MENU */
+
+.side-menu{
+position:fixed;
+top:0;
+left:-320px;
+width:320px;
+height:100%;
+overflow-y:auto;
+background:
+linear-gradient(rgba(0,0,0,0.93),rgba(0,0,0,0.96)),
+url('https://images.unsplash.com/photo-1521412644187-c49fa049e84d?q=80&w=1200&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+z-index:2000;
+transition:0.3s ease;
+box-shadow:5px 0 25px rgba(0,0,0,0.4);
+}
+
+.close-btn{
+position:absolute;
+top:10px;
+right:18px;
+font-size:34px;
+color:white;
+cursor:pointer;
+}
+
+.menu-top{
+padding:30px 20px;
+text-align:center;
+border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.menu-top img{
+width:90px;
+height:90px;
+background:white;
+border-radius:50%;
+padding:5px;
+margin-bottom:12px;
+}
+
+.menu-title{
+font-size:24px;
+font-weight:bold;
+color:white;
+}
+
+.menu-sub{
+font-size:12px;
+color:#ddd;
+margin-top:6px;
+}
+
+.menu-links{
+padding:18px;
+}
+
+.menu-item{
+display:flex;
+align-items:center;
+gap:15px;
+text-decoration:none;
+color:white;
+padding:18px;
+margin-bottom:15px;
+border-radius:20px;
+background:
+linear-gradient(135deg,
+rgba(139,0,0,0.93),
+rgba(40,40,40,0.93));
+transition:0.3s;
+box-shadow:0 5px 16px rgba(0,0,0,0.35);
+}
+
+.menu-item:hover{
+transform:translateX(5px);
+}
+
+.menu-icon{
+font-size:26px;
+}
+
+.menu-text span{
+display:block;
+font-size:15px;
+font-weight:bold;
+}
+
+.menu-text small{
+font-size:11px;
+color:#ddd;
+}
+
+/* MAIN */
+
+section{
+max-width:1150px;
+margin:auto;
+padding:20px;
+}
+
+/* BOX */
+
+.box{
+background:white;
+padding:26px;
+border-radius:22px;
+margin-bottom:30px;
+box-shadow:0 6px 22px rgba(0,0,0,0.08);
+border-left:6px solid #8b0000;
+}
+
+.box h3{
+font-size:22px;
+margin-bottom:16px;
+color:#8b0000;
+}
+
+.box p{
+font-size:14px;
+line-height:2;
+}
+
+/* ANO */
+
+.ano-box{
+display:flex;
+gap:25px;
+flex-wrap:wrap;
+align-items:flex-start;
+}
+
+.ano-photo{
+text-align:center;
+}
+
+.ano-photo img{
+width:150px;
+border-radius:16px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.ano-name{
+font-size:14px;
+font-weight:bold;
+margin-top:10px;
+}
+
+.ano-sub{
+font-size:11px;
+color:#555;
+}
+
+/* BENEFITS */
+
+.benefits-popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#f4f6fb;
+overflow-y:auto;
+z-index:99999;
+}
+
+.benefits-header{
+position:sticky;
+top:0;
+z-index:999;
+background:#111;
+padding:14px;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:12px;
+flex-wrap:wrap;
+box-shadow:0 4px 15px rgba(0,0,0,0.25);
+}
+
+.lang-btn{
+padding:13px 24px;
+border:none;
+border-radius:14px;
+background:#333;
+color:white;
+font-size:13px;
+font-weight:bold;
+cursor:pointer;
+transition:0.25s;
+}
+
+.lang-btn.active{
+background:#8b0000;
+transform:scale(1.04);
+box-shadow:0 0 15px rgba(139,0,0,0.7);
+}
+
+.close-popup{
+background:black;
+}
+
+.benefits-container{
+max-width:1200px;
+margin:auto;
+padding:30px 20px;
+}
+
+.language-section{
+display:none;
+}
+
+.language-section.active{
+display:block;
+}
+
+.benefit-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+margin-top:25px;
+}
+
+.benefit-card{
+background:white;
+border-radius:22px;
+padding:24px;
+box-shadow:0 8px 24px rgba(0,0,0,0.08);
+border-top:6px solid #8b0000;
+transition:0.3s;
+}
+
+.benefit-card:hover{
+transform:translateY(-5px);
+}
+
+.benefit-icon{
+font-size:42px;
+margin-bottom:16px;
+}
+
+.benefit-card h4{
+font-size:20px;
+color:#8b0000;
+margin-bottom:14px;
+}
+
+.benefit-card ul{
+padding-left:18px;
+}
+
+.benefit-card li{
+margin-bottom:10px;
+font-size:14px;
+line-height:1.7;
+}
+
+/* GALLERY */
+
+.gallery-box{
+text-align:center;
+}
+
+.gallery-btn{
+display:inline-block;
+margin-top:15px;
+padding:14px 28px;
+background:linear-gradient(135deg,#8b0000,#111);
+color:white;
+text-decoration:none;
+border-radius:16px;
+font-weight:bold;
+font-size:14px;
+transition:0.3s;
+box-shadow:0 8px 18px rgba(0,0,0,0.2);
+}
+
+.gallery-btn:hover{
+transform:scale(1.05);
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+font-size:12px;
+line-height:1.9;
+margin-top:40px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.top-logos img{
+height:30px;
+}
+
+.title-box h1{
+font-size:18px;
+}
+
+.college-name{
+font-size:12px;
+}
+
+.unit-name{
+font-size:10px;
+}
+
+.notice-title{
+font-size:22px;
+}
+
+.notice-board{
+padding:50px 18px 25px;
+}
+
+.notice-item{
+padding:12px;
+}
+
+.notice-text{
+font-size:12px;
+line-height:1.7;
+}
+
+.notice-logo{
+width:44px;
+height:44px;
+top:-22px;
+}
+
+.ano-box{
+flex-direction:column;
+align-items:center;
+}
+
+.side-menu{
+width:280px;
+left:-280px;
+}
+
+.lang-btn{
+padding:10px 14px;
+font-size:11px;
+}
+
+.menu-btn{
+font-size:13px;
+padding:13px 22px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- OVERLAY -->
+
+<div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+<!-- SIDE MENU -->
+
+<div class="side-menu" id="sideMenu">
+
+<div class="close-btn" onclick="closeMenu()">×</div>
+
+<div class="menu-top">
+
+<img src="jagatpurpglogo.png.png" />
+
+<div class="menu-title">
+NCC MENU
+</div>
+
+<div class="menu-sub">
+2 UP EME COY NCC • JPPG COLLEGE
+</div>
+
+</div>
+
+<div class="menu-links">
+
+<a class="menu-item" href="CAMPS AND ACTIVITIES.HTML">
+<div class="menu-icon">🏕️</div>
+<div class="menu-text">
+<span>CAMPS &amp; ACTIVITIES</span>
+<small>NCC Camps &amp; Events</small>
+</div>
+</a>
+
+<a class="menu-item" href="OUR ACHIEVERS.HTML">
+<div class="menu-icon">🪖</div>
+<div class="menu-text">
+<span>ACHIEVEMENT</span>
+<small>CADETS ACHIEVED THEIR AIM</small>
+</div>
+</a>
+
+<a class="menu-item" href="NCC RECRUITMENT.HTML">
+<div class="menu-icon">📢</div>
+<div class="menu-text">
+<span>RECRUITMENT</span>
+<small>NCC Enrollment</small>
+</div>
+</a>
+
+<!-- GALLERY -->
+
+<a class="menu-item" href="javascript:void(0)" onclick="openBenefits()">
+
+<div class="menu-icon">🎖️</div>
+
+<div class="menu-text">
+<span>BENEFITS OF NCC</span>
+<small>English &amp; Hindi Section</small>
+</div>
+
+</a>
+
+<a class="menu-item" href="https://drive.google.com/drive/folders/1YI9HuBe8cs_0dwLTTJlfpQOB_JSvXfgN?usp=drive_link">
+
+<div class="menu-icon">🖼️</div>
+
+<div class="menu-text">
+<span>GALLERY</span>
+<small>Photos &amp; PDFs</small>
+</div>
+
+</a>
+
+</div>
+
+</div>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="top-logos">
+
+<img src="jagatpur.png.jpg" />
+
+<img src="army.png.png" />
+
+<img src="airforce.png.png" />
+
+<img src="navy.png.png" />
+
+<img src="ncclogo.png.jpg" />
+
+</div>
+
+<div class="title-box">
+
+<h1>NATIONAL CADET CORPS</h1>
+
+<div class="college-name">
+JAGATPUR PG COLLEGE
+</div>
+
+<div class="unit-name">
+2 UP EME COY NCC VARANASI
+</div>
+
+</div>
+
+</header>
+
+<center>
+
+<div class="menu-btn" onclick="openMenu()">
+☰ OPEN NCC MENU
+</div>
+
+</center>
+
+<!-- NOTICE BOARD -->
+
+<div class="notice-wrapper">
+
+<img class="notice-logo" src="jagatpurpglogo.png.png" />
+
+<div class="notice-board">
+<div class="update-box">
+<div class="update-icon">⚡(UPDATED : 30/05/2026)</div>
+</div>
+<div class="notice-title">
+NOTICE BOARD
+</div>
+
+<div class="notice-list">
+
+<div class="notice-item">
+<div class="notice-icon">📢</div>
+<div class="notice-text">
+CATC - 284 NOTIFICATION OUT, CAMP STARTING FROM 8 JUNE 2026 TO 17 JUNE 202I IN 89 UP BATTALION
+</div>
+</div>
+
+<div class="notice-item">
+<div class="notice-icon">🏕️</div>
+<div class="notice-text">
+CATC, Army Attachment Camp, RDC and firing practice notices will be updated here regularly.
+</div>
+</div>
+
+<div class="notice-item">
+<div class="notice-icon">🪖</div>
+<div class="notice-text">
+Cadets should bring NCC diary, water bottle and ID card during training and camps.
+</div>
+</div>
+
+<div class="notice-item">
+<div class="notice-icon">🎯</div>
+<div class="notice-text">
+Physical fitness, drill practice and attendance are compulsory for all enrolled cadets.
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- HOME -->
+
+<section>
+
+<div class="box">
+
+<h3>What is National Cadet Corps?</h3>
+
+<p style="text-align:justify;">
+The National Cadet Corps (NCC) is the youth wing of the Indian Armed Forces that aims to develop discipline, leadership, confidence, and patriotism among students. It provides basic military training to school and college students and encourages them to become responsible citizens of the nation.
+
+NCC cadets take part in parades, drills, camps, social service activities, and Army Attachment Programs. These activities help students improve their physical fitness, teamwork, communication skills, and leadership qualities. NCC also teaches the importance of unity, discipline, and national service.
+
+The motto of NCC is “Unity and Discipline.” Through NCC, students get opportunities to experience military life and learn about the armed forces. It also helps cadets in building successful careers, as many NCC cadets are selected in Defence Services, Police, and other government sectors.
+
+Today, NCC is one of the largest youth organizations in India and plays an important role in shaping disciplined and confident young citizens.
+
+“Once a Cadet, Always a Cadet.”
+</p>
+
+</div>
+
+<div class="box">
+
+<h3>NCC in Jagatpur PG College.</h3>
+
+<p class="home-justify" style="text-align:justify;">
+NCC was started in Jagatpur P.G. College in 2022 under 2 UP EME COY NCC. It was introduced through the efforts of Colonel G. S. Tulsi, former Principal Prof. Anil Pratap Singh, Director Prof. Nilay Kumar, CTO Dr. Suresh Kumar Singh (now Lieutenant), and local education authorities.
+
+The main aim of NCC in the college is to develop discipline, leadership, confidence, physical fitness, and patriotism among students. Cadets receive military training and take part in camps, parades, drills, and Army Attachment Programs.
+
+NCC has helped many students improve their personality and career opportunities. Many cadets from the college have been selected in government sectors such as Defence Services, Police, and other government departments.
+
+Today, NCC is an important part of Jagatpur P.G. College and continues to guide students towards discipline, service, and successful careers.
+</p>
+
+</div>
+
+<div class="box">
+
+<h3>Message from ANO</h3>
+
+<div class="ano-box">
+
+<div class="ano-photo">
+
+<img src="suresh.png.png" />
+
+<div class="ano-name">
+Lt. Suresh Kumar Singh
+</div>
+
+<div class="ano-sub">
+(ANO JPPG College)
+</div>
+
+</div>
+
+<div class="ano-message">
+
+<p style="text-align:justify;">
+It gives me great pride to see NCC growing in Jagatpur P.G. College since its establishment in 2022 under 2 UP EME COY NCC. NCC plays an important role in developing discipline, leadership, confidence, and patriotism among students.
+
+Our cadets have actively participated in camps, parades, social service activities, and Army Attachment Programs. Many cadets have also achieved success in Defence Services, Police, and other government sectors, bringing pride to the college.
+
+I encourage all cadets to continue working hard, maintain discipline, and always serve the nation with dedication and honesty.
+</p>
+
+<B>Unity and Discipline</B>
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- GALLERY -->
+
+<div class="box gallery-box" id="gallerySection">
+
+<h3>NCC Gallery</h3>
+
+<p>
+Photos, camp memories, parade activities and NCC documents can be accessed here.
+</p>
+
+<a class="gallery-btn" href="https://drive.google.com/drive/folders/1f7Ot7rBjb469bUKenInoy717LEY7BIeg?usp=drive_link">
+
+📂 OPEN GALLERY
+
+</a>
+
+</div>
+
+</section>
+
+<!-- BENEFITS -->
+
+<div class="benefits-popup" id="benefitsPopup">
+
+<div class="benefits-header">
+
+<button class="lang-btn active" id="englishBtn" onclick="showEnglish()">
+
+ENGLISH
+
+</button>
+
+<button class="lang-btn" id="hindiBtn" onclick="showHindi()">
+
+हिंदी
+
+</button>
+
+<button class="lang-btn close-popup" onclick="closeBenefits()">
+
+✖ CLOSE
+
+</button>
+
+</div>
+
+<div class="benefits-container">
+
+<!-- ENGLISH -->
+
+<div class="language-section active" id="englishSection">
+
+<div class="benefit-grid">
+
+<div class="benefit-card">
+<div class="benefit-icon">🎖️</div>
+<h4>Personality Development</h4>
+<ul>
+<li>Leadership qualities</li>
+<li>Confidence building</li>
+<li>Communication skills</li>
+<li>Time management</li>
+<li>Decision making ability</li>
+</ul>
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">🪖</div>
+<h4>Defence Benefits</h4>
+<ul>
+<li>NCC Special Entry Scheme</li>
+<li>Direct SSB Interview</li>
+<li>No written exam</li>
+<li>OTA Chennai entry</li>
+<li>Reserved seats for NCC cadets</li>
+</ul>
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">📚</div>
+<h4>Education Benefits</h4>
+<ul>
+<li>5% to 7% reservation in universities</li>
+<li>NCC special quota</li>
+<li>Bonus marks in admission</li>
+<li>Hostel priority</li>
+<li>Scholarships &amp; allowances</li>
+</ul>
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">🚔</div>
+<h4>Police &amp; CAPF Benefits</h4>
+<ul>
+<li>Bonus marks in BSF</li>
+<li>CISF benefits</li>
+<li>SSC CPO advantage</li>
+<li>Priority in police recruitment</li>
+<li>Additional weightage</li>
+</ul>
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">🏕️</div>
+<h4>National Camps</h4>
+<ul>
+<li>Republic Day Camp</li>
+<li>Thal Sainik Camp</li>
+<li>Army Attachment Camp</li>
+<li>National Integration Camp</li>
+<li>Mountaineering &amp; Trekking</li>
+</ul>
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">🌍</div>
+<h4>Foreign Exposure</h4>
+<ul>
+<li>Youth Exchange Programme</li>
+<li>International exposure</li>
+<li>Cultural exchange</li>
+<li>Represent India abroad</li>
+<li>Leadership growth</li>
+</ul>
+</div>
+
+</div>
+
+</div>
+
+<!-- HINDI -->
+
+<div class="language-section" id="hindiSection">
+
+<div class="benefit-grid">
+
+<div class="benefit-card">
+<div class="benefit-icon">🎖️</div>
+<h4>व्यक्तित्व विकास</h4>
+<ul>
+<li>नेतृत्व क्षमता</li>
+<li>आत्मविश्वास</li>
+<li>अनुशासन</li>
+<li>समय प्रबंधन</li>
+<li>संचार कौशल</li>
+</ul>
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">🪖</div>
+<h4>रक्षा सेवाओं में लाभ</h4>
+<ul>
+<li>NCC Special Entry Scheme</li>
+<li>सीधे SSB Interview</li>
+<li>लिखित परीक्षा नहीं</li>
+<li>OTA Chennai प्रवेश</li>
+<li>NCC कैडेटों के लिए सीटें</li>
+</ul>
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">📚</div>
+<h4>शिक्षा में लाभ</h4>
+<ul>
+<li>5% से 7% आरक्षण</li>
+<li>NCC विशेष कोटा</li>
+<li>बोनस अंक</li>
+<li>हॉस्टल प्राथमिकता</li>
+<li>छात्रवृत्ति</li>
+</ul>
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">🚔</div>
+<h4>पुलिस एवं CAPF लाभ</h4>
+<ul>
+<li>BSF बोनस अंक</li>
+<li>CISF लाभ</li>
+<li>SSC CPO लाभ</li>
+<li>पुलिस भर्ती प्राथमिकता</li>
+<li>अतिरिक्त वेटेज</li>
+</ul>
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">🏕️</div>
+<h4>राष्ट्रीय कैंप</h4>
+<ul>
+<li>Republic Day Camp</li>
+<li>Thal Sainik Camp</li>
+<li>Army Attachment Camp</li>
+<li>NIC Camp</li>
+<li>Trekking एवं Mountaineering</li>
+</ul>
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">🌍</div>
+<h4>विदेश यात्रा अवसर</h4>
+<ul>
+<li>Youth Exchange Programme</li>
+<li>अंतरराष्ट्रीय Exposure</li>
+<li>सांस्कृतिक आदान-प्रदान</li>
+<li>भारत का प्रतिनिधित्व</li>
+<li>नेतृत्व विकास</li>
+</ul>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+NATIONAL CADET CORPS | Jagatpur PG College
+</p>
+
+<p>
+2 UP EME COY NCC Varanasi
+</p>
+
+</footer>
+
+<script>
+
+function openMenu(){
+
+document.getElementById("sideMenu").style.left="0";
+document.getElementById("overlay").style.display="block";
+
+}
+
+function closeMenu(){
+
+document.getElementById("sideMenu").style.left="-320px";
+document.getElementById("overlay").style.display="none";
+
+}
+
+function openBenefits(){
+
+document.getElementById("benefitsPopup").style.display="block";
+document.body.style.overflow="hidden";
+
+showEnglish();
+
+closeMenu();
+
+}
+
+function closeBenefits(){
+
+document.getElementById("benefitsPopup").style.display="none";
+document.body.style.overflow="auto";
+
+}
+
+function showEnglish(){
+
+document.getElementById("englishSection").classList.add("active");
+document.getElementById("hindiSection").classList.remove("active");
+
+document.getElementById("englishBtn").classList.add("active");
+document.getElementById("hindiBtn").classList.remove("active");
+
+}
+
+function showHindi(){
+
+document.getElementById("hindiSection").classList.add("active");
+document.getElementById("englishSection").classList.remove("active");
+
+document.getElementById("hindiBtn").classList.add("active");
+document.getElementById("englishBtn").classList.remove("active");
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NCC Recruitment | Jagatpur P.G. College</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#050816;
+color:white;
+overflow-x:hidden;
+}
+
+body::before{
+content:'';
+position:fixed;
+width:500px;
+height:500px;
+background:radial-gradient(circle,#0ea5e955,transparent 70%);
+top:-200px;
+right:-150px;
+z-index:-1;
+}
+
+body::after{
+content:'';
+position:fixed;
+width:450px;
+height:450px;
+background:radial-gradient(circle,#facc1530,transparent 70%);
+bottom:-200px;
+left:-100px;
+z-index:-1;
+}
+
+.container{
+width:min(1150px,92%);
+margin:auto;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:50px 0;
+text-align:center;
+position:relative;
+}
+
+.hero-box{
+width:100%;
+padding:50px 25px;
+border-radius:32px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+backdrop-filter:blur(18px);
+box-shadow:0 20px 60px rgba(0,0,0,0.35);
+}
+
+.badge{
+display:inline-block;
+padding:10px 22px;
+border-radius:50px;
+background:rgba(14,165,233,0.15);
+border:1px solid rgba(14,165,233,0.3);
+color:#7dd3fc;
+font-size:13px;
+font-weight:600;
+margin-bottom:22px;
+}
+
+.hero h1{
+font-size:clamp(2rem,5.5vw,3.8rem);
+line-height:1.1;
+font-weight:800;
+margin-bottom:14px;
+background:linear-gradient(to right,#fff,#7dd3fc);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero h2{
+font-size:clamp(1rem,3vw,1.5rem);
+color:#facc15;
+margin-bottom:18px;
+font-weight:600;
+}
+
+.hero p{
+max-width:720px;
+margin:auto;
+font-size:15px;
+line-height:1.8;
+color:#cbd5e1;
+}
+
+.btn,
+.btn:visited,
+.btn:active{
+
+display:inline-flex;
+align-items:center;
+justify-content:center;
+margin-top:30px;
+padding:14px 30px;
+background:linear-gradient(135deg,#0ea5e9,#2563eb);
+color:#ffffff;
+text-decoration:none;
+border-radius:50px;
+font-weight:600;
+transition:0.3s;
+box-shadow:0 12px 30px rgba(37,99,235,0.4);
+}
+
+.btn:hover{
+transform:translateY(-4px);
+background:linear-gradient(135deg,#0ea5e9,#2563eb);
+color:#ffffff;
+}
+
+section{
+padding:40px 0;
+}
+
+.heading{
+text-align:center;
+margin-bottom:20px;
+}
+
+.heading h2{
+font-size:clamp(1.5rem,4vw,2.3rem);
+margin-bottom:10px;
+}
+
+.heading p{
+color:#94a3b8;
+font-size:15px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:12px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:24px;
+padding:18px;
+transition:0.3s;
+backdrop-filter:blur(14px);
+}
+
+.card:hover{
+transform:translateY(-6px);
+border-color:#38bdf8;
+}
+
+.icon{
+width:60px;
+height:60px;
+border-radius:18px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+background:linear-gradient(135deg,#0ea5e9,#2563eb);
+margin-bottom:18px;
+}
+
+.card h3{
+font-size:20px;
+margin-bottom:10px;
+}
+
+.card p,
+.card li{
+font-size:14px;
+line-height:1.7;
+color:#cbd5e1;
+}
+
+.card ul{
+padding-left:18px;
+margin-top:10px;
+}
+
+.recruit-box{
+text-align:center;
+padding:28px 20px;
+border-radius:30px;
+background:linear-gradient(145deg,#0f172a,#111827);
+border:1px solid rgba(255,255,255,0.08);
+box-shadow:0 20px 50px rgba(0,0,0,0.3);
+}
+
+.recruit-box h3{
+font-size:clamp(1.2rem,3vw,2rem);
+color:#fde047;
+margin-bottom:8px;
+font-weight:700;
+letter-spacing:1px;
+text-transform:uppercase;
+}
+
+.recruit-box p{
+color:#cbd5e1;
+font-size:13px;
+}
+
+.timeline{
+display:grid;
+gap:10px;
+}
+
+.step{
+display:flex;
+gap:14px;
+align-items:flex-start;
+background:rgba(255,255,255,0.05);
+padding:14px;
+border-radius:24px;
+border:1px solid rgba(255,255,255,0.08);
+transition:0.3s;
+}
+
+.step:hover{
+transform:translateX(4px);
+border-color:#facc15;
+}
+
+.number{
+min-width:58px;
+height:58px;
+border-radius:18px;
+background:linear-gradient(135deg,#facc15,#eab308);
+color:#111827;
+font-weight:800;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:20px;
+}
+
+.step h3{
+font-size:20px;
+margin-bottom:8px;
+}
+
+.step p,
+.step li{
+font-size:14px;
+color:#cbd5e1;
+line-height:1.7;
+}
+
+.step ul{
+padding-left:18px;
+margin-top:8px;
+}
+
+.docs{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:8px;
+}
+
+.doc{
+padding:22px 18px;
+text-align:center;
+border-radius:22px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+transition:0.3s;
+}
+
+.doc:hover{
+transform:translateY(-5px);
+border-color:#38bdf8;
+}
+
+.doc span{
+font-size:32px;
+display:block;
+margin-bottom:10px;
+}
+
+.doc h4{
+font-size:14px;
+font-weight:500;
+line-height:1.5;
+}
+
+.motto{
+padding:70px 20px;
+text-align:center;
+background:linear-gradient(135deg,#0f172a,#020617);
+position:relative;
+overflow:hidden;
+}
+
+.motto::before{
+content:'';
+position:absolute;
+width:400px;
+height:400px;
+background:radial-gradient(circle,#0ea5e930,transparent 70%);
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+}
+
+.motto h2{
+position:relative;
+font-size:clamp(1.8rem,5vw,3rem);
+color:#facc15;
+margin-bottom:12px;
+font-weight:800;
+}
+
+.motto p{
+position:relative;
+font-size:clamp(1rem,4vw,1.5rem);
+color:#e2e8f0;
+}
+
+footer{
+padding:25px;
+text-align:center;
+font-size:14px;
+color:#94a3b8;
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+@media(max-width:768px){
+.hero h1{
+line-height:1.2;
+}
+
+.heading h2{
+margin-bottom:8px;
+}
+
+.card h3,
+.step h3{
+font-size:18px;
+}
+
+.hero-box{
+padding:40px 18px;
+}
+
+section{
+padding:65px 0;
+}
+
+.step{
+flex-direction:column;
+}
+
+.number{
+min-width:50px;
+height:50px;
+font-size:18px;
+}
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+<div class="container">
+<div class="hero-box">
+<div class="badge">2 UP EME COY NCC • VARANASI</div>
+<h1>NCC Recruitment</h1>
+<h2>Jagatpur P.G. College</h2>
+<p>
+Build discipline, confidence, leadership, and patriotism through NCC training, camps, adventure, and teamwork.
+</p>
+<a href="#selection" class="btn">View Process</a>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="heading">
+<h2>Why Join NCC?</h2>
+<p>Develop leadership, fitness, and confidence.</p>
+</div>
+
+<div class="grid">
+<div class="card">
+<div class="icon">🛡️</div>
+<h3>Discipline</h3>
+<p>Build responsibility, confidence, and personality.</p>
+</div>
+
+<div class="card">
+<div class="icon">⭐</div>
+<h3>Leadership</h3>
+<p>Improve teamwork, communication, and leadership skills.</p>
+</div>
+
+<div class="card">
+<div class="icon">🏕️</div>
+<h3>Training</h3>
+<p>Experience camps, drills, firing, and adventure activities.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="heading">
+<h2>Recruitment Period</h2>
+<p>Expected NCC enrollment schedule.</p>
+</div>
+
+<div class="recruit-box">
+<h3>September – October</h3>
+<p>Official dates will be announced soon.</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="heading">
+<h2>Eligibility</h2>
+<p>Basic requirements for NCC recruitment.</p>
+</div>
+
+<div class="grid">
+<div class="card">
+<div class="icon">🎓</div>
+<h3>College Student</h3>
+<p>Must be a student of Jagatpur P.G. College.</p>
+</div>
+
+<div class="card">
+<div class="icon">💪</div>
+<h3>Fitness</h3>
+<p>Physically and mentally fit for NCC training.</p>
+</div>
+
+<div class="card">
+<div class="icon">🔥</div>
+<h3>Interest</h3>
+<p>Good discipline and interest in NCC activities.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="selection">
+<div class="container">
+<div class="heading">
+<h2>Selection Process</h2>
+<p>Complete NCC recruitment stages.</p>
+</div>
+
+<div class="timeline">
+
+<div class="step">
+<div class="number">1</div>
+<div>
+<h3>Registration</h3>
+<p>Submit enrollment form and documents.</p>
+</div>
+</div>
+
+<div class="step">
+<div class="number">2</div>
+<div>
+<h3>Physical Test</h3>
+<ul>
+<li>Running</li>
+<li>Push-Ups</li>
+<li>Fitness Assessment</li>
+</ul>
+</div>
+</div>
+
+<div class="step">
+<div class="number">3</div>
+<div>
+<h3>Physical Standard</h3>
+<ul>
+<li>Height</li>
+<li>Chest</li>
+<li>Body Fitness</li>
+</ul>
+</div>
+</div>
+
+<div class="step">
+<div class="number">4</div>
+<div>
+<h3>Written Exam</h3>
+<ul>
+<li>GK & GS</li>
+<li>Reasoning</li>
+<li>Mathematics</li>
+<li>Current Affairs</li>
+</ul>
+</div>
+</div>
+
+<div class="step">
+<div class="number">5</div>
+<div>
+<h3>CO Interview</h3>
+<ul>
+<li>Confidence</li>
+<li>Leadership</li>
+<li>Communication</li>
+</ul>
+</div>
+</div>
+
+<div class="step">
+<div class="number">6</div>
+<div>
+<h3>Final Selection</h3>
+<p>Based on overall performance in all stages.</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="heading">
+<h2>Required Documents</h2>
+</div>
+
+<div class="docs">
+<div class="doc"><span>🪪</span><h4>Aadhaar Card (ZEROX)</h4></div>
+<div class="doc"><span>📷</span><h4>Passport Size Photos (3 COPIES)</h4></div>
+<div class="doc"><span>🏫</span><h4>College ID (CHALLAN ZEROX)</h4></div>
+<div class="doc"><span>📄</span><h4>Marksheet (10TH and 12TH ZEROX)</h4></div>
+<div class="doc"><span>🛡️</span><h4>Character Certificate (ZEROX)</h4></div>
+<div class="doc"><span>🏥</span><h4>Medical Certificate</h4></div>
+<div class="doc"><span>🏠</span><h4>Residence Certificate (ZEROX)</h4></div>
+<div class="doc"><span>🩸</span><h4>Blood Group</h4></div>
+<div class="doc"><span>👨‍👩‍👦</span><h4>Parent Consent</h4></div>
+<div class="doc"><span>📱</span><h4>Mobile NO. & Email</h4></div>
+<div class="doc"><span>📝</span><h4>NCC Form</h4></div>
+</div>
+</div>
+</section>
+
+<section class="motto">
+<h2>Unity and Discipline</h2>
+<p>“Once a Cadet, Always a Cadet.”</p>
+</section>
+
+<footer>
+FOR MORE INFORMATION, PLEASE CONTACT NCC OFFICE JAGATPUR PG COLLEGE & ANO 
+</footer>
+
+</body>
+</html>
