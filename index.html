@@ -1,9 +1,10 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <link rel="icon" type="image/png" href="jagatpurpglogo.png.png">
 <meta name="keywords" content="ncc jagatpur pg college, NCC varanasi, ncc cadets, ncc camps, ncc recruitment, ncc training, jagatpur pg college, 2 UP EME COY NCC varanasi, Amitabh kumar, colonel Amitabh kumar">    
-<meta charset="UTF-8"></meta>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
+<meta charset="UTF-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
 
 <title>2 UP EME COY NCC </title>
 
@@ -170,6 +171,7 @@ letter-spacing:2px;
 margin-bottom:22px;
 text-shadow:0 0 12px rgba(255, 217, 0, 0.735);
 }
+
 .update-box{
 position:absolute;
 top:15px;
@@ -179,6 +181,7 @@ font-weight:bold;
 color:white;
 z-index:100;
 }
+
 .notice-list{
 display:flex;
 flex-direction:column;
@@ -210,6 +213,12 @@ font-size:20px;
 color:white;
 font-size:14px;
 line-height:1.8;
+}
+
+.notice-text a{
+color:#ffd700;
+text-decoration:underline;
+font-weight:bold;
 }
 
 /* OVERLAY */
@@ -350,203 +359,71 @@ color:#8b0000;
 font-size:14px;
 line-height:2;
 }
-/* COMMANDING OFFICER */
 
-.commanding-officer-box{
-    display:flex;
-    gap:25px;
-    flex-wrap:wrap;
-    align-items:flex-start;
-}
+/* OFFICER TOP PHOTO CONTAINER */
 
-.commanding-officer-photo{
-    text-align:center;
-}
-
-.commanding-officer-photo img{
-    width:150px;
-    border-radius:16px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.2);
-}
-
-.commanding-officer-name{
-    font-size:14px;
-    font-weight:bold;
-    margin-top:10px;
-}
-
-.commanding-officer-sub{
-    font-size:11px;
-    color:#555;
-}
-
-/* Unit Name */
-.commanding-officer-unit{
-    font-size:9px;
-    font-weight:bold;
-    margin-top:4px;
-}
-/* ANO */
-
-.ano-box{
-display:flex;
-gap:25px;
-flex-wrap:wrap;
-align-items:flex-start;
-}
-
-.ano-photo{
+.officer-photo-top{
 text-align:center;
+margin-bottom:20px;
+padding-bottom:15px;
+border-bottom:1px solid #eee;
 }
 
-.ano-photo img{
+.officer-photo-top img{
 width:150px;
 border-radius:16px;
 box-shadow:0 5px 15px rgba(0,0,0,0.2);
+margin-bottom:8px;
 }
 
-.ano-name{
-font-size:14px;
+.officer-name{
+font-size:16px;
 font-weight:bold;
-margin-top:10px;
+color:#111;
 }
 
-.ano-sub{
-font-size:11px;
+.officer-sub{
+font-size:12px;
 color:#555;
 }
-.ano-unit{
-    font-size:9px;
-    font-weight:bold;
-    margin-top:4px;
 
-/* BENEFITS */
-
-.benefits-popup{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:#f4f6fb;
-overflow-y:auto;
-z-index:99999;
-}
-
-.benefits-header{
-position:sticky;
-top:0;
-z-index:999;
-background:#111;
-padding:14px;
-display:flex;
-justify-content:center;
-align-items:center;
-gap:12px;
-flex-wrap:wrap;
-box-shadow:0 4px 15px rgba(0,0,0,0.25);
-}
-
-.lang-btn{
-padding:13px 24px;
-border:none;
-border-radius:14px;
-background:#333;
-color:white;
-font-size:13px;
+.officer-unit{
+font-size:11px;
 font-weight:bold;
-cursor:pointer;
-transition:0.25s;
-}
-
-.lang-btn.active{
-background:#8b0000;
-transform:scale(1.04);
-box-shadow:0 0 15px rgba(139,0,0,0.7);
-}
-
-.close-popup{
-background:black;
-}
-
-.benefits-container{
-max-width:1200px;
-margin:auto;
-padding:30px 20px;
-}
-
-.language-section{
-display:none;
-}
-
-.language-section.active{
-display:block;
-}
-
-.benefit-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
-margin-top:25px;
-}
-
-.benefit-card{
-background:white;
-border-radius:22px;
-padding:24px;
-box-shadow:0 8px 24px rgba(0,0,0,0.08);
-border-top:6px solid #8b0000;
-transition:0.3s;
-}
-
-.benefit-card:hover{
-transform:translateY(-5px);
-}
-
-.benefit-icon{
-font-size:42px;
-margin-bottom:16px;
-}
-
-.benefit-card h4{
-font-size:20px;
 color:#8b0000;
-margin-bottom:14px;
+margin-top:2px;
 }
 
-.benefit-card ul{
-padding-left:18px;
-}
+/* LIGHT RED GALLERY BUTTON BOX */
 
-.benefit-card li{
-margin-bottom:10px;
-font-size:14px;
-line-height:1.7;
-}
-
-/* GALLERY */
-
-.gallery-box{
+.gallery-box-btn{
+background:#ffebee;
+border:2px solid #ffcdd2;
+border-left:6px solid #d32f2f;
 text-align:center;
+cursor:pointer;
+transition:0.3s;
+text-decoration:none;
+display:block;
+color:inherit;
 }
 
-.gallery-btn{
+.gallery-box-btn:hover{
+transform:translateY(-3px);
+background:#ffcdd2;
+box-shadow:0 10px 25px rgba(211,47,47,0.2);
+}
+
+.gallery-btn-text{
 display:inline-block;
 margin-top:15px;
-padding:14px 28px;
-background:linear-gradient(135deg,#8b0000,#111);
+padding:12px 26px;
+background:#d32f2f;
 color:white;
-text-decoration:none;
-border-radius:16px;
+border-radius:14px;
 font-weight:bold;
 font-size:14px;
-transition:0.3s;
-box-shadow:0 8px 18px rgba(0,0,0,0.2);
-}
-
-.gallery-btn:hover{
-transform:scale(1.05);
+box-shadow:0 4px 12px rgba(211,47,47,0.3);
 }
 
 /* FOOTER */
@@ -604,19 +481,9 @@ height:44px;
 top:-22px;
 }
 
-.ano-box{
-flex-direction:column;
-align-items:center;
-}
-
 .side-menu{
 width:280px;
 left:-280px;
-}
-
-.lang-btn{
-padding:10px 14px;
-font-size:11px;
 }
 
 .menu-btn{
@@ -643,7 +510,7 @@ padding:13px 22px;
 
 <div class="menu-top">
 
-<img src="jagatpurpglogo.png.png" />
+<img src="jagatpurpglogo.png.png" alt="Logo" />
 
 <div class="menu-title">
 NCC MENU
@@ -681,17 +548,13 @@ NCC MENU
 </div>
 </a>
 
-<!-- GALLERY -->
-
-<a class="menu-item" href="javascript:void(0)" onclick="openBenefits()">
-
+<!-- BENEFITS OF NCC MENU ITEM -->
+<a class="menu-item" href="benefits.html">
 <div class="menu-icon">🎖️</div>
-
 <div class="menu-text">
 <span>BENEFITS OF NCC</span>
 <small>English &amp; Hindi Section</small>
 </div>
-
 </a>
 
 <a class="menu-item" href="https://drive.google.com/drive/folders/19EOiCAQFebug5JJOs9dJJdXDDxg4M1MU?usp=sharing">
@@ -715,13 +578,13 @@ NCC MENU
 
 <div class="top-logos">
 
-<img src="army.png.png" />
+<img src="army.png.png" alt="Army" />
 
-<img src="airforce.png.png" />
+<img src="airforce.png.png" alt="Air Force" />
 
-<img src="navy.png.png" />
+<img src="navy.png.png" alt="Navy" />
 
-<img src="ncclogo.png.jpg" />
+<img src="ncclogo.png.jpg" alt="NCC Logo" />
 
 </div>
 
@@ -756,7 +619,7 @@ OPEN NCC MENU<br>
 
 <div class="notice-wrapper">
 
-<img class="notice-logo" src="jagatpurpglogo.png.png" />
+<img class="notice-logo" src="jagatpurpglogo.png.png" alt="Logo" />
 
 <div class="notice-board">
 <div class="update-box">
@@ -771,17 +634,14 @@ NOTICE BOARD
 <div class="notice-item">
 <div class="notice-icon">🪖</div>
 <div class="notice-text">
-NCC enrollment in 2 UP EME COY NCC is started. fill form from office. for info. <a class="click here" href="NCC RECRUITMENT.HTML">
-<span>click here</span>
-</div>
-</a>
+NCC enrollment in 2 UP EME COY NCC is started. fill form from office. for info. <a href="NCC RECRUITMENT.HTML">click here</a>
 </div>
 </div>
 
 <div class="notice-item">
 <div class="notice-icon">📢</div>
 <div class="notice-text">
-    Classes of new sessions have to started in few days. All enrolled cadets are requested to attend the classes regularly.
+Classes of new sessions have to started in few days. All enrolled cadets are requested to attend the classes regularly.
 </div>
 </div>
 
@@ -812,7 +672,7 @@ Physical fitness, drill practice and attendance are compulsory for all enrolled 
 
 </div>
 
-<!-- HOME -->
+<!-- HOME SECTION -->
 
 <section>
 
@@ -838,8 +698,8 @@ Today, NCC is one of the largest youth organizations in India and plays an impor
 
 <h3>2 UP EME COY NCC BHU Varanasi...</h3>
 
-<p class="home-justify" style="text-align:justify;">
-<b></b>2 UP EME COY NCC</b> is an Army Wing NCC unit based at Banaras Hindu University (BHU), Varanasi, under NCC Group Headquarters, Varanasi ‘A’.
+<p style="text-align:justify;">
+<b>2 UP EME COY NCC</b> is an Army Wing NCC unit based at Banaras Hindu University (BHU), Varanasi, under NCC Group Headquarters, Varanasi ‘A’.
 
 The unit traces its history to <b>5 August 1921</b>, when its roots were connected with the University Training Corps. The unit carries the traditions of discipline, military training, leadership, and service associated with the NCC and the <b>Corps of Electronics and Mechanical Engineers (EME)</b>.
 
@@ -857,314 +717,76 @@ Through NCC training and activities, cadets develop discipline, confidence, team
 
 <h3>Message from COMMANDING OFFICER...</h3>
 
-<div class="commanding-officer-box">
-
-<div class="commanding-officer-photo">
-
-<img src="coimage.png.png" />
-
-<div class="commanding-officer-name">
-    <strong>Colonel Amitabh Kumar</strong>
-</div>
-
-<div class="commanding-officer-sub">
-    (Commanding Officer)
-</div>
-
-<div class="commanding-officer-unit">
-    <strong>(2 UP EME COY NCC BHU Varanasi)</strong>
-</div>
-
+<!-- CO Photo on Top Center -->
+<div class="officer-photo-top">
+<img src="coimage.png.png" alt="Commanding Officer" />
+<div class="officer-name">Colonel Amitabh Kumar</div>
+<div class="officer-sub">(Commanding Officer)</div>
+<div class="officer-unit">(2 UP EME COY NCC BHU Varanasi)</div>
 </div>
 
 <div class="commanding-officer-message">
-
 <p style="text-align:justify;">
 It gives me great pleasure to be associated with 2 UP EME COY NCC, BHU, Varanasi. NCC provides young cadets with an opportunity to develop discipline, confidence, leadership, and a sense of responsibility.
-
 I encourage all cadets to take their training seriously, participate actively in NCC activities, and make the most of every opportunity that comes their way. Always maintain discipline, respect your seniors and instructors, support your fellow cadets, and give your best in every task.
-
 As members of an EME unit, let us carry forward the spirit of hard work, teamwork, and dedication to duty. I wish all cadets success in their NCC journey and in their future endeavours.
+</p>
 <p><b>Wishing all cadets the very best for their future.</b></p>
-<b>JAI HIND!</b>
-
-</div>
-
+<p><b>JAI HIND!</p>
 </div>
 
 </div>
 
 <!-- MESSAGE FROM ANO -->
-
 <div class="box">
 
 <h3>Message from ANO</h3>
 
-<div class="ano-box">
-
-<div class="ano-photo">
-
-<img src="suresh.png.png" />
-
-<div class="ano-name">
-Lt. Suresh Kumar Singh
-</div>
-
-<div class="ano-sub">
-(Assistant NCC Officer)
-</div>
-<div class="ano-unit">
-<b>(2 UP EME COY NCC BHU Varanasi)</b>
-</div>
-
+<!-- ANO Photo on Top Center -->
+<div class="officer-photo-top">
+<img src="suresh.png.png" alt="ANO" />
+<div class="officer-name">Lt. Suresh Kumar Singh</div>
+<div class="officer-sub">(Associate NCC Officer)</div>
+<div class="officer-unit">(2 UP EME COY NCC BHU Varanasi)</div>
 </div>
 
 <div class="ano-message">
-
 <p style="text-align:justify;">
 It gives me great pleasure to see the growth and progress of 2 UP EME COY NCC, BHU, Varanasi. Our cadets continue to show discipline, dedication, teamwork, and enthusiasm in various NCC activities, camps, parades, social service programmes, and training.
-
 Being a part of an EME unit, we take pride in the spirit of hard work, technical knowledge, teamwork, and dedication to duty. I encourage every cadet to learn, improve, and always give their best in every task.
-
 Always maintain discipline, respect your seniors and instructors, support your fellow cadets, and carry forward the values that NCC teaches us. The experiences and lessons gained during your NCC journey will remain with you throughout your life.
-
-Keep moving forward with confidence, discipline, and dedication.
-
+Keep moving forward with confidence, discipline, and dedication.</p>
+<br>
 <p><b>JAI HIND!</b></p>
-</p>
-
-<B>Unity and Discipline</B>
-
-</p>
-
+<p><b>Unity and Discipline</b></p>
 </div>
 
 </div>
 
-</div>
+<!-- NCC GALLERY BUTTON CARD -->
 
-<!-- GALLERY -->
-
-<div class="box gallery-box" id="gallerySection">
+<a href="https://drive.google.com/drive/folders/1f7Ot7rBjb469bUKenInoy717LEY7BIeg?usp=drive_link" class="box gallery-box-btn" target="_blank">
 
 <h3>NCC Gallery</h3>
 
-<p>
+<p style="color:#555;">
 Photos, camp memories, parade activities and NCC documents can be accessed here.
 </p>
 
-<a class="gallery-btn" href="https://drive.google.com/drive/folders/1f7Ot7rBjb469bUKenInoy717LEY7BIeg?usp=drive_link">
-
+<div class="gallery-btn-text">
 📂 OPEN GALLERY
+</div>
 
 </a>
 
-</div>
-
 </section>
-
-<!-- BENEFITS -->
-
-<div class="benefits-popup" id="benefitsPopup">
-
-<div class="benefits-header">
-
-<button class="lang-btn active" id="englishBtn" onclick="showEnglish()">
-
-ENGLISH
-
-</button>
-
-<button class="lang-btn" id="hindiBtn" onclick="showHindi()">
-
-हिंदी
-
-</button>
-
-<button class="lang-btn close-popup" onclick="closeBenefits()">
-
-✖ CLOSE
-
-</button>
-
-</div>
-
-<div class="benefits-container">
-
-<!-- ENGLISH -->
-
-<div class="language-section active" id="englishSection">
-
-<div class="benefit-grid">
-
-<div class="benefit-card">
-<div class="benefit-icon">🎖️</div>
-<h4>Personality Development</h4>
-<ul>
-<li>Leadership qualities</li>
-<li>Confidence building</li>
-<li>Communication skills</li>
-<li>Time management</li>
-<li>Decision making ability</li>
-</ul>
-</div>
-
-<div class="benefit-card">
-<div class="benefit-icon">🪖</div>
-<h4>Defence Benefits</h4>
-<ul>
-<li>NCC Special Entry Scheme</li>
-<li>Direct SSB Interview</li>
-<li>No written exam</li>
-<li>OTA Chennai entry</li>
-<li>Reserved seats for NCC cadets</li>
-</ul>
-</div>
-
-<div class="benefit-card">
-<div class="benefit-icon">📚</div>
-<h4>Education Benefits</h4>
-<ul>
-<li>5% to 7% reservation in universities</li>
-<li>NCC special quota</li>
-<li>Bonus marks in admission</li>
-<li>Hostel priority</li>
-<li>Scholarships &amp; allowances</li>
-</ul>
-</div>
-
-<div class="benefit-card">
-<div class="benefit-icon">🚔</div>
-<h4>Police &amp; CAPF Benefits</h4>
-<ul>
-<li>Bonus marks in BSF</li>
-<li>CISF benefits</li>
-<li>SSC CPO advantage</li>
-<li>Priority in police recruitment</li>
-<li>Additional weightage</li>
-</ul>
-</div>
-
-<div class="benefit-card">
-<div class="benefit-icon">🏕️</div>
-<h4>National Camps</h4>
-<ul>
-<li>Republic Day Camp</li>
-<li>Thal Sainik Camp</li>
-<li>Army Attachment Camp</li>
-<li>National Integration Camp</li>
-<li>Mountaineering &amp; Trekking</li>
-</ul>
-</div>
-
-<div class="benefit-card">
-<div class="benefit-icon">🌍</div>
-<h4>Foreign Exposure</h4>
-<ul>
-<li>Youth Exchange Programme</li>
-<li>International exposure</li>
-<li>Cultural exchange</li>
-<li>Represent India abroad</li>
-<li>Leadership growth</li>
-</ul>
-</div>
-
-</div>
-
-</div>
-
-<!-- HINDI -->
-
-<div class="language-section" id="hindiSection">
-
-<div class="benefit-grid">
-
-<div class="benefit-card">
-<div class="benefit-icon">🎖️</div>
-<h4>व्यक्तित्व विकास</h4>
-<ul>
-<li>नेतृत्व क्षमता</li>
-<li>आत्मविश्वास</li>
-<li>अनुशासन</li>
-<li>समय प्रबंधन</li>
-<li>संचार कौशल</li>
-</ul>
-</div>
-
-<div class="benefit-card">
-<div class="benefit-icon">🪖</div>
-<h4>रक्षा सेवाओं में लाभ</h4>
-<ul>
-<li>NCC Special Entry Scheme</li>
-<li>सीधे SSB Interview</li>
-<li>लिखित परीक्षा नहीं</li>
-<li>OTA Chennai प्रवेश</li>
-<li>NCC कैडेटों के लिए सीटें</li>
-</ul>
-</div>
-
-<div class="benefit-card">
-<div class="benefit-icon">📚</div>
-<h4>शिक्षा में लाभ</h4>
-<ul>
-<li>5% से 7% आरक्षण</li>
-<li>NCC विशेष कोटा</li>
-<li>बोनस अंक</li>
-<li>हॉस्टल प्राथमिकता</li>
-<li>छात्रवृत्ति</li>
-</ul>
-</div>
-
-<div class="benefit-card">
-<div class="benefit-icon">🚔</div>
-<h4>पुलिस एवं CAPF लाभ</h4>
-<ul>
-<li>BSF बोनस अंक</li>
-<li>CISF लाभ</li>
-<li>SSC CPO लाभ</li>
-<li>पुलिस भर्ती प्राथमिकता</li>
-<li>अतिरिक्त वेटेज</li>
-</ul>
-</div>
-
-<div class="benefit-card">
-<div class="benefit-icon">🏕️</div>
-<h4>राष्ट्रीय कैंप</h4>
-<ul>
-<li>Republic Day Camp</li>
-<li>Thal Sainik Camp</li>
-<li>Army Attachment Camp</li>
-<li>NIC Camp</li>
-<li>Trekking एवं Mountaineering</li>
-</ul>
-</div>
-
-<div class="benefit-card">
-<div class="benefit-icon">🌍</div>
-<h4>विदेश यात्रा अवसर</h4>
-<ul>
-<li>Youth Exchange Programme</li>
-<li>अंतरराष्ट्रीय Exposure</li>
-<li>सांस्कृतिक आदान-प्रदान</li>
-<li>भारत का प्रतिनिधित्व</li>
-<li>नेतृत्व विकास</li>
-</ul>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
 
 <!-- FOOTER -->
 
 <footer>
 
 <p>
-NATIONAL CADET CORPS | Jagatpur PG College
+NATIONAL CADET CORPS 
 </p>
 
 <p>
@@ -1176,58 +798,16 @@ NATIONAL CADET CORPS | Jagatpur PG College
 <script>
 
 function openMenu(){
-
 document.getElementById("sideMenu").style.left="0";
 document.getElementById("overlay").style.display="block";
-
 }
 
 function closeMenu(){
-
 document.getElementById("sideMenu").style.left="-320px";
 document.getElementById("overlay").style.display="none";
-
-}
-
-function openBenefits(){
-
-document.getElementById("benefitsPopup").style.display="block";
-document.body.style.overflow="hidden";
-
-showEnglish();
-
-closeMenu();
-
-}
-
-function closeBenefits(){
-
-document.getElementById("benefitsPopup").style.display="none";
-document.body.style.overflow="auto";
-
-}
-
-function showEnglish(){
-
-document.getElementById("englishSection").classList.add("active");
-document.getElementById("hindiSection").classList.remove("active");
-
-document.getElementById("englishBtn").classList.add("active");
-document.getElementById("hindiBtn").classList.remove("active");
-
-}
-
-function showHindi(){
-
-document.getElementById("hindiSection").classList.add("active");
-document.getElementById("englishSection").classList.remove("active");
-
-document.getElementById("hindiBtn").classList.add("active");
-document.getElementById("englishBtn").classList.remove("active");
-
 }
 
 </script>
 
 </body>
-</html
+</html>
