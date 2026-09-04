@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="icon" type="image/png" href="UPLOADED IMAGES/logo.png.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Benefits of NCC - 2 UP EME COY NCC</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
 <style>
+
+:root {
+  --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%);
+  --header-bg: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  --neon-cyan: #00f0ff;
+  --neon-cyan-glow: rgba(0, 240, 255, 0.45);
+  --neon-purple: #a855f7;
+  --neon-purple-glow: rgba(168, 85, 247, 0.35);
+  --neon-gold: #f59e0b;
+  --neon-gold-glow: rgba(245, 158, 11, 0.4);
+  --army-red: #dc2626;
+  --text-dark: #0f172a;
+  --text-muted: #64748b;
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --card-border: rgba(255, 255, 255, 0.9);
+  
+  --font-title: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
 
 *{
 margin:0;
@@ -15,305 +39,529 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial,sans-serif;
-background:#f4f6fb;
-color:#111;
-line-height:1.6;
+font-family: var(--font-body);
+background: var(--bg-gradient);
+background-attachment: fixed;
+overflow-x:hidden;
+color: var(--text-dark);
 }
 
 /* HEADER */
 
 header{
-background:linear-gradient(135deg,#8b0000,#1a0000);
-padding:25px 10px;
+background: var(--header-bg);
+padding: 25px 15px 15px 15px;
 text-align:center;
-color:white;
-box-shadow:0 5px 20px rgba(0,0,0,0.3);
+color: var(--text-dark);
+border-bottom: 2px solid rgba(0, 240, 255, 0.2);
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+position: relative;
+}
+
+.top-logos{
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+gap:15px;
+margin-bottom:15px;
+}
+
+.top-logos img{
+height:48px;
+background: #ffffff;
+padding:5px;
+border-radius:50%;
+box-shadow: 0 0 15px var(--neon-cyan-glow), 0 4px 10px rgba(0,0,0,0.05);
+border: 2px solid var(--neon-cyan);
+transition: all 0.4s ease;
 }
 
 .title-box h1{
-font-size:24px;
-letter-spacing:1px;
+font-family: var(--font-title);
+font-size: 36px;
+font-weight: 900;
+letter-spacing: 2px;
+background: linear-gradient(135deg, #0f172a 10%, var(--army-red) 90%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+margin-bottom: 6px;
+text-transform: uppercase;
+line-height: 1.1;
 }
 
-.title-box p{
-font-size:13px;
-color:#ffd700;
-margin-top:6px;
+.subtitle{
+font-family: var(--font-title);
+font-size: 18px;
+font-weight: 800;
+color: #4f46e5;
+letter-spacing: 3px;
+margin-top: 2px;
+text-shadow: 0 0 12px rgba(79, 70, 229, 0.25);
+text-transform: uppercase;
 }
 
-/* NAVIGATION BAR */
+/* NAVIGATION BAR & LANGUAGE TOGGLE */
 
-.nav-bar{
-max-width:1150px;
-margin:15px auto 0;
-padding:0 20px;
-display:flex;
-justify-content:space-between;
-align-items:center;
+.navbar-container {
+position: sticky;
+top: 10px;
+z-index: 1000;
+max-width: 1150px;
+margin: 20px auto 35px auto;
+padding: 0 15px;
+}
+
+.navbar {
+background: rgba(255, 255, 255, 0.85);
+backdrop-filter: blur(16px);
+-webkit-backdrop-filter: blur(16px);
+border-radius: 50px;
+padding: 8px 16px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border: 2px solid rgba(0, 240, 255, 0.4);
+box-shadow: 
+  0 10px 30px rgba(0, 0, 0, 0.08),
+  0 0 20px var(--neon-cyan-glow),
+  inset 0 0 15px rgba(255, 255, 255, 0.6);
 }
 
 .back-btn{
-display:inline-flex;
-align-items:center;
-gap:8px;
-background:#111;
-color:white;
-padding:10px 18px;
-border-radius:12px;
-text-decoration:none;
-font-size:13px;
-font-weight:bold;
-transition:0.3s;
+font-family: var(--font-title);
+display: inline-flex;
+align-items: center;
+gap: 8px;
+background: #0f172a;
+color: white;
+padding: 9px 18px;
+border-radius: 30px;
+text-decoration: none;
+font-size: 12px;
+font-weight: 800;
+letter-spacing: 0.5px;
+transition: 0.3s ease;
+border: 1px solid var(--neon-cyan);
+box-shadow: 0 0 10px var(--neon-cyan-glow);
 }
 
 .back-btn:hover{
-background:#8b0000;
+background: var(--army-red);
+border-color: #ffffff;
+transform: translateY(-2px);
 }
 
-/* LANGUAGE TOGGLE BUTTONS */
-
 .lang-switch{
-display:flex;
-gap:10px;
+display: flex;
+gap: 8px;
+background: rgba(241, 245, 249, 0.8);
+padding: 4px;
+border-radius: 30px;
+border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .lang-btn{
-padding:10px 18px;
-border:none;
-border-radius:12px;
-background:#e0e0e0;
-color:#333;
-font-size:13px;
-font-weight:bold;
-cursor:pointer;
-transition:0.3s;
+font-family: var(--font-title);
+padding: 8px 16px;
+border: none;
+border-radius: 25px;
+background: transparent;
+color: var(--text-dark);
+font-size: 12px;
+font-weight: 800;
+cursor: pointer;
+transition: 0.3s ease;
 }
 
 .lang-btn.active{
-background:#8b0000;
-color:white;
-box-shadow:0 4px 12px rgba(139,0,0,0.3);
+background: linear-gradient(135deg, #0284c7, #0369a1);
+color: white;
+box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3), 0 0 10px var(--neon-cyan-glow);
 }
 
-/* MAIN CONTAINER */
+/* CONTAINER & SECTIONS */
 
 .container{
-max-width:1150px;
-margin:20px auto 40px;
-padding:0 20px;
+max-width: 1150px;
+margin: 20px auto 40px;
+padding: 0 20px;
 }
 
 .section-title{
-text-align:center;
-font-size:26px;
-color:#8b0000;
-margin-bottom:25px;
-font-weight:bold;
+font-family: var(--font-title);
+text-align: center;
+font-size: 28px;
+font-weight: 900;
+color: #0f172a;
+margin-bottom: 30px;
+letter-spacing: 1px;
+position: relative;
+}
+
+.section-title::after {
+content: '';
+display: block;
+width: 60px;
+height: 4px;
+background: var(--neon-gold);
+margin: 8px auto 0 auto;
+border-radius: 2px;
+box-shadow: 0 0 10px var(--neon-gold-glow);
 }
 
 .lang-content{
-display:none;
+display: none;
 }
 
 .lang-content.active{
-display:block;
+display: block;
 }
 
-/* GRID & CARDS */
+/* CARDS GRID */
 
 .grid{
-display:grid;
-grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
-gap:20px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+gap: 25px;
 }
 
 .card{
-background:white;
-border-radius:18px;
-padding:22px;
-box-shadow:0 6px 18px rgba(0,0,0,0.06);
-border-top:5px solid #8b0000;
-transition:0.3s;
+background: var(--card-bg);
+backdrop-filter: blur(10px);
+border-radius: 24px;
+padding: 28px;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+border: 1px solid var(--card-border);
+border-top: 5px solid var(--neon-cyan);
+transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+position: relative;
+overflow: hidden;
 }
 
+.card:nth-child(2) { border-top-color: var(--neon-purple); }
+.card:nth-child(3) { border-top-color: var(--neon-gold); }
+.card:nth-child(4) { border-top-color: var(--army-red); }
+.card:nth-child(5) { border-top-color: #10b981; }
+.card:nth-child(6) { border-top-color: #6366f1; }
+
 .card:hover{
-transform:translateY(-4px);
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
+transform: translateY(-5px);
+box-shadow: 0 15px 35px rgba(0, 240, 255, 0.15), 0 0 20px rgba(0,0,0,0.05);
+}
+
+.card-header-flex {
+display: flex;
+align-items: center;
+gap: 15px;
+margin-bottom: 15px;
+border-bottom: 1px solid #e2e8f0;
+padding-bottom: 12px;
 }
 
 .card-icon{
-font-size:32px;
-margin-bottom:12px;
+font-size: 32px;
+background: #f8fafc;
+width: 55px;
+height: 55px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 16px;
+border: 1px solid #e2e8f0;
+box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+flex-shrink: 0;
 }
 
 .card h3{
-font-size:18px;
-color:#8b0000;
-margin-bottom:12px;
-border-bottom:1px solid #eee;
-padding-bottom:8px;
+font-family: var(--font-title);
+font-size: 18px;
+font-weight: 800;
+color: #0f172a;
+line-height: 1.3;
 }
 
 .card ul{
-padding-left:18px;
+padding-left: 0;
+list-style: none;
 }
 
 .card li{
-font-size:13px;
-margin-bottom:8px;
-color:#333;
+font-size: 13.5px;
+margin-bottom: 10px;
+color: #334155;
+line-height: 1.6;
+position: relative;
+padding-left: 20px;
+}
+
+.card li::before {
+content: '✦';
+position: absolute;
+left: 0;
+color: #0284c7;
+font-size: 12px;
+top: 1px;
+}
+
+.card li strong {
+color: #0f172a;
+font-weight: 700;
 }
 
 /* FOOTER */
 
 footer{
-background:#111;
-color:white;
-text-align:center;
-padding:20px;
-font-size:12px;
-margin-top:40px;
+background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+color: #f8fafc;
+text-align: center;
+padding: 25px 20px;
+font-size: 13px;
+line-height: 1.8;
+margin-top: 50px;
+border-top: 2px solid var(--neon-purple);
+box-shadow: 0 -10px 30px rgba(168, 85, 247, 0.15);
 }
 
-@media(max-width:600px){
-.nav-bar{
-flex-direction:column;
-gap:12px;
-align-items:stretch;
+footer p:first-child {
+font-family: var(--font-title);
+font-weight: 800;
+letter-spacing: 2px;
+color: var(--neon-cyan);
+margin-bottom: 4px;
 }
-.back-btn, .lang-switch{
-justify-content:center;
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width:768px){
+
+.title-box h1{
+font-size: 24px;
 }
-.lang-btn{
-flex:1;
+
+.subtitle{
+font-size: 14px;
 }
+
+.navbar {
+flex-direction: row;
+gap: 10px;
+padding: 6px 12px;
+}
+
+.back-btn {
+padding: 7px 14px;
+font-size: 11px;
+}
+
+.lang-btn {
+padding: 6px 12px;
+font-size: 11px;
+}
+
+.section-title {
+font-size: 22px;
+}
+
+.grid {
+grid-template-columns: 1fr;
+}
+
+.card {
+padding: 20px;
+}
+
 }
 
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
-
 <header>
+
+<div class="top-logos">
+<img src="UPLOADED IMAGES/army.png.png" alt="Army" />
+<img src="UPLOADED IMAGES/airforce.png.png" alt="Air Force" />
+<img src="UPLOADED IMAGES/navy.png.png" alt="Navy" />
+<img src="UPLOADED IMAGES/ncclogo.png.jpg" alt="NCC Logo" />
+</div>
+
 <div class="title-box">
 <h1>BENEFITS OF NCC</h1>
-<p>2 UP EME COY NCC</p>
+<div class="subtitle">2 UP EME COY NCC • IIT BHU</div>
 </div>
+
 </header>
 
-<!-- NAVIGATION & LANGUAGE SWITCH -->
+<div class="navbar-container">
+  <nav class="navbar">
+    <a href="index.html" class="back-btn">⬅ HOME</a>
 
-<div class="nav-bar">
-<a href="index.html" class="back-btn">⬅ Back to Home</a>
-
-<div class="lang-switch">
-<button class="lang-btn active" id="btn-en" onclick="switchLang('en')">English</button>
-<button class="lang-btn" id="btn-hi" onclick="switchLang('hi')">हिन्दी</button>
+    <div class="lang-switch">
+      <button class="lang-btn active" id="btn-en" onclick="switchLang('en')">English</button>
+      <button class="lang-btn" id="btn-hi" onclick="switchLang('hi')">हिन्दी</button>
+    </div>
+  </nav>
 </div>
-</div>
-
-<!-- MAIN CONTENT -->
 
 <div class="container">
 
-<!-- ENGLISH SECTION -->
-
 <div id="en-section" class="lang-content active">
 
-<div class="section-title">Key Advantages of Joining NCC</div>
+<div class="section-title">Official Advantages & Benefits of NCC</div>
 
 <div class="grid">
 
 <div class="card">
+<div class="card-header-flex">
 <div class="card-icon">🪖</div>
-<h3>Defence Forces Incentives</h3>
+<h3>Indian Armed Forces (Officers Entry)</h3>
+</div>
 <ul>
-<li><strong>Direct SSB Interview:</strong> 'C' Certificate holders can apply directly for SSB interviews without written exam for IMA, OTA, and Navy entries.</li>
-<li><strong>Bonus Marks:</strong> Extra marks in Soldier, Sailor, and Airmen recruitment examinations.</li>
-<li><strong>Reserved Vacancies:</strong> Special reservation for NCC cadet certificate holders in Armed Forces academies.</li>
+<li><strong>NCC Special Entry Scheme:</strong> 'C' Certificate holders with minimum 'B' Grade can apply directly for SSB Interviews for Indian Army (IMA & OTA) without appearing for written CDS Exam.</li>
+<li><strong>Reserved Vacancies:</strong> 54 seats per course reserved in OTA Chennai for Army, 6 seats per course for Navy, and 10% seats in all courses of Indian Air Force (IAF).</li>
+<li><strong>Direct SSB for Women:</strong> Direct SSB entry opportunities reserved specifically for female NCC 'C' certificate holders in Army OTA.</li>
 </ul>
 </div>
 
 <div class="card">
+<div class="card-header-flex">
+<div class="card-icon">🎖️</div>
+<h3>Agniveer & Non-Commissioned Ranks</h3>
+</div>
+<ul>
+<li><strong>Agniveer Recruitment Bonus:</strong> Extra bonus marks awarded during Indian Army Agniveer GD, Tradesman, Technical, and Clerk written examinations.</li>
+<li><strong>Bonus Mark Matrix:</strong> 'C' Certificate holders get up to 20 bonus marks; 'B' Cert gets 10 bonus marks, and 'A' Cert gets 5 bonus marks.</li>
+<li><strong>Airmen & Sailors:</strong> Preference and additional weightage in Indian Navy (SSR/MR) and Indian Air Force (Group X & Y) selection lists.</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="card-header-flex">
 <div class="card-icon">👮</div>
-<h3>Paramilitary & Police Services</h3>
+<h3>Central Armed Police Forces (CAPF)</h3>
+</div>
 <ul>
-<li><strong>CAPF Recruitment:</strong> Direct bonus marks in SSC Central Armed Police Forces (BSF, CISF, CRPF, SSB, ITBP) exams.</li>
-<li><strong>State Police Bonus:</strong> Bonus percentage/marks added in UP Police and state force constable & SI recruitment.</li>
-<li><strong>Security Agencies:</strong> Preference in private security agencies and government security cadres.</li>
+<li><strong>UPSC CAPF (AC) Exam:</strong> Direct bonus weightage in Assistant Commandant recruitment examinations.</li>
+<li><strong>SSC CAPF & Constable Scheme:</strong> 'C' Certificate holders receive 5% extra marks of total exam score; 'B' Cert gets 3%, and 'A' Cert gets 2% bonus marks.</li>
+<li><strong>State Police Forces:</strong> Additional marks and direct preference in UP Police, Bihar Police, and Delhi Police Recruitment boards.</li>
 </ul>
 </div>
 
 <div class="card">
+<div class="card-header-flex">
+<div class="card-icon">🌐</div>
+<h3>International YEP & National Camps</h3>
+</div>
+<ul>
+<li><strong>Youth Exchange Programme (YEP):</strong> Selected cadets represent India in friendly foreign countries like UK, Russia, Singapore, Vietnam, and Sri Lanka.</li>
+<li><strong>Prestigious National Camps:</strong> Opportunity to participate in Republic Day Camp (RDC), Thal Sainik Camp (TSC), Vayu Sainik Camp (VSC), and Nau Sainik Camp (NSC).</li>
+<li><strong>Adventure Training:</strong> Mountaineering courses, Para-jumping at PTS Agra, Trekking, and Water Sports.</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="card-header-flex">
 <div class="card-icon">🎓</div>
-<h3>Academic & Career Benefits</h3>
+<h3>Academics & Scholarships</h3>
+</div>
 <ul>
-<li><strong>Higher Education Preference:</strong> Weightage during admissions in universities and PG courses.</li>
-<li><strong>Scholarships:</strong> Sahara Scholarship, Cadets Welfare Society (CWS) scholarships for outstanding cadets.</li>
-<li><strong>Corporate Preference:</strong> Reliance, Tata, and major corporates give preference to disciplined NCC cadets.</li>
+<li><strong>University Admission Weightage:</strong> Extra percentage weightage awarded during admissions in Central Universities and Degree Colleges.</li>
+<li><strong>Cadet Welfare Society (CWS):</strong> Annual financial scholarships worth ₹6,000 for high-performing cadets in academics and NCC.</li>
+<li><strong>Sahara & Chief Minister Grants:</strong> Sahara Scholarship grants up to ₹30,000 for higher professional studies.</li>
 </ul>
 </div>
 
 <div class="card">
-<div class="card-icon">⛺</div>
-<h3>Personality & Skill Development</h3>
+<div class="card-header-flex">
+<div class="card-icon">💼</div>
+<h3>Corporate & Government Jobs</h3>
+</div>
 <ul>
-<li><strong>Camps & Leadership:</strong> Training through CATC, NIC, RDC, TSC, and Mountaineering camps.</li>
-<li><strong>Life Skills:</strong> Development of self-discipline, time management, leadership, and public speaking.</li>
-<li><strong>Physical Fitness:</strong> Regular drill, firing practice, and obstacle training.</li>
+<li><strong>Private & PSU Preference:</strong> Major corporate conglomerates like Reliance, Tata, Mahindra, and security firms give preference to NCC cadets.</li>
+<li><strong>Telecom & Civilian Posts:</strong> Direct reservation/preference in Ordnance Factories and Ministry of Defence civilian posts.</li>
+<li><strong>Life Skills & Leadership:</strong> Training develops high-level discipline, public speaking, decision-making, and officer-like qualities (OLQs).</li>
 </ul>
 </div>
 
 </div>
 </div>
-
-<!-- HINDI SECTION -->
 
 <div id="hi-section" class="lang-content">
 
-<div class="section-title">एनसीसी (NCC) में शामिल होने के प्रमुख लाभ</div>
+<div class="section-title">एनसीसी (NCC) के आधिकारिक एवं प्रामाणिक लाभ</div>
 
 <div class="grid">
 
 <div class="card">
+<div class="card-header-flex">
 <div class="card-icon">🪖</div>
-<h3>भारतीय सेना में अवसर</h3>
+<h3>भारतीय सशस्त्र बल (ऑफिसर भर्ती)</h3>
+</div>
 <ul>
-<li><strong>सीधा एसएसबी (SSB) इंटरव्यू:</strong> 'C' सर्टिफिकेट धारकों को IMA और OTA भर्ती में बिना लिखित परीक्षा के सीधे SSB इंटरव्यू की छूट।</li>
-<li><strong>बोनस अंक:</strong> थल सेना, नौसेना और वायुसेना की सामान्य सिपाही भर्तियों में अतिरिक्त बोनस अंक।</li>
-<li><strong>विशेष आरक्षण:</strong> सैन्य अकादमियों में एनसीसी कैडेट्स के लिए सीटें आरक्षित होती हैं।</li>
+<li><strong>एनसीसी स्पेशल एंट्री स्कीम:</strong> 'C' सर्टिफिकेट (न्यूनतम 'B' ग्रेड) धारकों को बिना CDS की लिखित परीक्षा दिए सीधे SSB इंटरव्यू देने की छूट।</li>
+<li><strong>अकादमियों में विशेष आरक्षण:</strong> OTA चेन्नई में थल सेना के लिए 54 सीटें, नौसेना में 6 सीटें, और भारतीय वायु सेना (IAF) में 10% सीटें आरक्षित।</li>
+<li><strong>महिला कैडेट्स को अवसर:</strong> थल सेना OTA में महिला 'C' सर्टिफिकेट धारकों के लिए भी डायरेक्ट SSB इंटरव्यू की विशेष सुविधा।</li>
 </ul>
 </div>
 
 <div class="card">
+<div class="card-header-flex">
+<div class="card-icon">🎖️</div>
+<h3>अग्निवीर एवं सिपाही भर्ती लाभ</h3>
+</div>
+<ul>
+<li><strong>अग्निवीर परीक्षा में छूट:</strong> भारतीय सेना Agniveer GD, टेक्निकल, क्लर्क और ट्रेड्समैन लिखित परीक्षा में अतिरिक्त बोनस अंक प्रदान किए जाते हैं।</li>
+<li><strong>अंकों का विवरण:</strong> 'C' सर्टिफिकेट धारकों को 20 बोनस अंक, 'B' सर्टिफिकेट धारकों को 10 अंक और 'A' सर्टिफिकेट को 5 अंक मिलते हैं।</li>
+<li><strong>नौसेना एवं वायुसेना:</strong> इंडियन नेवी (SSR/MR) और एयरफोर्स (ग्रुप X & Y) भर्ती मेरिट लिस्ट में अतिरिक्त प्राथमिकता।</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="card-header-flex">
 <div class="card-icon">👮</div>
-<h3>अर्धसैनिक बल एवं पुलिस भर्ती</h3>
+<h3>अर्धसैनिक बल एवं राज्य पुलिस भर्ती</h3>
+</div>
 <ul>
-<li><strong>CAPF भर्ती लाभ:</strong> SSC अर्धसैनिक बलों (BSF, CISF, CRPF, ITBP) की भर्ती में 2% से 5% तक बोनस अंक।</li>
-<li><strong>राज्य पुलिस वरीयता:</strong> यूपी पुलिस और अन्य राज्य पुलिस कांस्टेबल व SI भर्ती में अतिरिक्त अंक।</li>
-<li><strong>सुरक्षा एजेंसियां:</strong> सरकारी एवं निजी सुरक्षा क्षेत्रों में प्राथमिकता।</li>
+<li><strong>UPSC CAPF भर्ती:</strong> असिस्टेंट कमांडेंट (AC) परीक्षा में 'C' सर्टिफिकेट कैडेट्स को साक्षात्कार में विशेष वरीयता।</li>
+<li><strong>SSC BSF, CISF, CRPF, ITBP:</strong> लिखित परीक्षा के कुल अंक का 'C' सर्टिफिकेट पर 5%, 'B' पर 3% और 'A' पर 2% बोनस अंक मिलता है।</li>
+<li><strong>राज्य पुलिस भर्ती:</strong> यूपी पुलिस (UP Police), दिल्ली पुलिस और अन्य राज्य पुलिस कांस्टेबल व SI भर्ती में अतिरिक्त अंक और प्राथमिकता।</li>
 </ul>
 </div>
 
 <div class="card">
+<div class="card-header-flex">
+<div class="card-icon">🌐</div>
+<h3>अंतर्राष्ट्रीय YEP एवं राष्ट्रीय कैंप्स</h3>
+</div>
+<ul>
+<li><strong>Youth Exchange Programme (YEP):</strong> मेधावी कैडेट्स को ब्रिटेन, रूस, सिंगापुर, वियतनाम जैसे मित्र देशों में भारत का प्रतिनिधित्व करने का अवसर।</li>
+<li><strong>प्रतिष्ठित राष्ट्रीय कैंप:</strong> गणतंत्र दिवस शिविर (RDC), थल सैनिक कैंप (TSC), और नौ सैनिक कैंप (NSC) में भाग लेने का अवसर।</li>
+<li><strong>साहसिक प्रशिक्षण:</strong> पैरा-जंपिंग (PTS आगरा), पर्वतारोहण, ट्रैकिंग और वॉटर स्पोर्ट्स ट्रेनिंग का अवसर।</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="card-header-flex">
 <div class="card-icon">🎓</div>
 <h3>अकादमिक एवं छात्रवृत्ति लाभ</h3>
+</div>
 <ul>
-<li><strong>उच्च शिक्षा में प्रवेश:</strong> कॉलेजों और विश्वविद्यालयों के एडमिशन में वेटेज (अतिरिक्त अंक)।</li>
-<li><strong>छात्रवृत्ति प्रोत्साहन:</strong> मेधावी कैडेट्स के लिए कैडेट्स वेलफेयर सोसाइटी (CWS) और सहारा स्कॉलरशिप।</li>
-<li><strong>कॉरपोरेट जॉब्स:</strong> प्राइवेट सेक्टर की बड़ी कंपनियों में अनुशासित एनसीसी कैडेट्स को प्राथमिकता।</li>
+<li><strong>विश्वविद्यालय प्रवेश में छूट:</strong> केंद्रीय विश्वविद्यालयों और कॉलेजों में एडमिशन लेते समय एक्स्ट्रा वेटेज (अतिरिक्त प्रतिशत)।</li>
+<li><strong>कैडेट्स वेलफेयर सोसाइटी (CWS):</strong> मेधावी कैडेट्स के लिए ₹6,000 की वार्षिक वित्तीय छात्रवृत्ति।</li>
+<li><strong>सहारा एवं मुख्यमंत्री स्कॉलरशिप:</strong> उच्च व्यावसायिक शिक्षा के लिए सहारा स्कॉलरशिप द्वारा ₹30,000 तक का वित्तीय प्रोत्साहन।</li>
 </ul>
 </div>
 
 <div class="card">
-<div class="card-icon">⛺</div>
-<h3>व्यक्तित्व विकास एवं ट्रेनिंग</h3>
+<div class="card-header-flex">
+<div class="card-icon">💼</div>
+<h3>कॉरपोरेट एवं अन्य रोजगार</h3>
+</div>
 <ul>
-<li><strong>कैंप और नेतृत्व:</strong> RDC, TSC, NIC जैसे राष्ट्रीय स्तर के कैंप्स में भाग लेने का अवसर।</li>
-<li><strong>जीवन कौशल:</strong> अनुशासन, समय प्रबंधन, नेतृत्व क्षमता और आत्मविश्वास में वृद्धि।</li>
-<li><strong>शारीरिक फिटनेस:</strong> नियमित ड्रिल, फायरिंग (राइफल शूटिंग) और साहसिक खेल गतिविधियां।</li>
+<li><strong>प्राइवेट सेक्टर में वरीयता:</strong> रिलायंस, टाटा, महिंद्रा जैसी प्रमुख कंपनियां अनुशासित एनसीसी कैडेट्स को प्राथमिकता देती हैं।</li>
+<li><strong>रक्षा मंत्रालय सिविलियन पद:</strong> ऑर्डनेंस फैक्ट्रियों और रक्षा मंत्रालय के सिविलियन पदों पर भर्ती में वरीयता।</li>
+<li><strong>व्यक्तित्व एवं नेतृत्व विकास:</strong> एनसीसी से कैडेट्स में अनुशासन, सार्वजनिक भाषण, त्वरित निर्णय लेने और अफसर जैसे गुणों (OLQs) का विकास होता है।</li>
 </ul>
 </div>
 
@@ -322,10 +570,9 @@ flex:1;
 
 </div>
 
-<!-- FOOTER -->
-
 <footer>
-<p>NATIONAL CADET CORPS | 2 UP EME COY NCC Varanasi</p>
+<p>2 UP EME COY NCC</p>
+<p>IIT BHU, VARANASI</p>
 </footer>
 
 <script>
